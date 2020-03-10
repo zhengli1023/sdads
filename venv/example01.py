@@ -6,6 +6,7 @@ def main():
                         charset='utf8')  #连接数据库
     # 发送sql语句
     try:
+        # 获得游标对象
         with conn.cursor() as cursor: #上下文语法，用完自动关
             result= cursor.execute('insert into tb_college values(5,"中医学院",Null)')
             if result == 1:
